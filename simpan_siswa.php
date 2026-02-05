@@ -7,6 +7,7 @@ $error = "";
 $nis = "";
 $nama = "";
 $kelas = "";
+$jurusan = "";
 $alamat = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
