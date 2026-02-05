@@ -7,22 +7,22 @@ $error = "";
 $nip = "";
 $nama = "";
 $mapel = "";
-$alamat = "";
+$keterangan = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nip = $_POST['nip'];
     $nama = $_POST['nama'];
     $mapel = $_POST['mapel'];
-    $alamat = $_POST['alamat'];
+    $keterangan = $_POST['keterangan'];
 
-    $sql = "INSERT INTO guru (nip, nama, mapel) VALUES ('$nip', '$nama', '$mapel', '$alamat')";
+    $sql = "INSERT INTO guru (nip, nama, mapel, keterangan) VALUES ('$nip', '$nama', '$mapel', '$keterangan')";
     if (mysqli_query($koneksi, $sql)) {
         $sukses = "Data berhasil disimpan!";
         // reset input
         $nip = "";
         $nama = "";
         $mapel = "";
-        $alamat = "";
+        $keterangan = "";
     } else {
         $error = "Gagal menyimpan data: " . mysqli_error($koneksi);
     }
@@ -46,8 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="form-group">
-        <label>Alamat</label>
-        <input type="text" name="Alamat" class="form-control" value="<?= $alamat ?>" required>
+        <label>Keterangan</label>
+        <input type="text" name="keterangan" class="form-control" value="<?= $keterangan ?>" required>
     </div>
 
     <button class="btn btn-primary">Simpan</button>
