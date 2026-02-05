@@ -13,15 +13,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nis = $_POST['nis'];
     $nama = $_POST['nama'];
     $kelas = $_POST['kelas'];
+    $jurusan = $_POST['jurusan'];
     $alamat = $_POST['alamat'];
 
-    $sql = "INSERT INTO siswa (nis, nama, kelas, alamat) VALUES ('$nis', '$nama', '$kelas', '$alamat')";
+    $sql = "INSERT INTO siswa (nis, nama, kelas, jurusan, alamat) VALUES ('$nis', '$nama', '$kelas', '$jurusan', '$alamat')";
     if (mysqli_query($koneksi, $sql)) {
         $sukses = "Data berhasil disimpan!";
         // reset input
         $nis = "";
         $nama = "";
         $kelas = "";
+        $jurusan = "";
         $alamat = "";
     } else {
         $error = "Gagal menyimpan data: " . mysqli_error($koneksi);
@@ -52,6 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="form-group">
         <label>Kelas</label>
         <input type="text" name="kelas" class="form-control" value="<?= $kelas ?>" required>
+    </div>
+    <div class="form-group">
+        <label>Jurusan</label>
+        <input type="text" name="jurusan" class="form-control" value="<?= $jurusan ?>" required>
     </div>
 
     <div class="form-group">

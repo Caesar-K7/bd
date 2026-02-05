@@ -25,6 +25,7 @@ $result = mysqli_query($koneksi, $sql);
                         <th>NIS</th>
                         <th>Nama Siswa</th>
                         <th>Kelas</th>
+                        <th>Jurusan</th>
                         <th>Alamat</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@ $result = mysqli_query($koneksi, $sql);
                                 <td><?= $row['nis'] ?></td>
                                 <td><?= $row['nama'] ?></td>
                                 <td><?= $row['kelas'] ?></td>
+                                <td><?= $row['jurusan'] ?></td>
                                 <td><?= $row['alamat'] ?></td>
                             </tr>
                         <?php } ?>
