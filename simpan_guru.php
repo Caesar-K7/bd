@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <form method="post">
     <div class="form-group">
         <label>NIP</label>
-        <input type="number" name="NIP" class="form-control" value="<?= $nip ?>" required>
+        <input type="number" name="nip" class="form-control" value="<?= $nip ?>" required>
     </div>
 
     <div class="form-group">
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="form-group">
         <label>Mapel</label>
-        <input type="text" name="Mapel" class="form-control" value="<?= $mapel ?>" required>
+        <input type="text" name="mapel" class="form-control" value="<?= $mapel ?>" required>
     </div>
 
     <div class="form-group">
