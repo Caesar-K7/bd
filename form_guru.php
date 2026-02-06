@@ -1,4 +1,9 @@
-
+<?php
+$nip = "";
+$nama = "";
+$mapel = "";
+$keterangan = "";
+?>
 
 <form method="post" action="simpan_guru.php">
     <div class="form-group">

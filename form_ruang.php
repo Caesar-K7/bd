@@ -1,3 +1,10 @@
+<?php
+$id = "";
+$nama = "";
+$kapasitas = "";
+$keterangan = "";
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

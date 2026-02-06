@@ -1,4 +1,13 @@
 
+<?php
+$nis = '';
+$nama = '';
+$kelas = '';
+$jurusan = '';
+$alamat = '';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +17,7 @@
 </head>
 <body>
     <h1>Input Data Siswa</h1>
-    <form method="post" action="simpan_siswa.php">
+    <form id method="post" action="simpan_siswa.php">
     <div class="form-group">
         <label>NIS</label>
         <input type="number" name="nis" class="form-control" value="<?= $nis ?>" required>
