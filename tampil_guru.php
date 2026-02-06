@@ -1,5 +1,6 @@
 <?php
 include "koneksi.php";
+include "CSS.php";
 
 $sql = "SELECT * FROM guru ORDER BY NIP DESC";
 $result = mysqli_query($koneksi, $sql);

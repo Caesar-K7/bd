@@ -1,5 +1,6 @@
 <?php
 include "koneksi.php";
+include "CSS.php";
 
 $sql = "SELECT * FROM ruang ORDER BY id DESC";
 $result = mysqli_query($koneksi, $sql);
