@@ -1,4 +1,5 @@
 <?php
+include "CSS.php";
 $nip = "";
 $nama = "";
 $mapel = "";

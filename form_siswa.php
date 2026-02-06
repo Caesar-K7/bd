@@ -1,5 +1,6 @@
 
 <?php
+include "CSS.php";
 $nis = '';
 $nama = '';
 $kelas = '';

@@ -1,4 +1,5 @@
 <?php
+include "CSS.php";
 $id = "";
 $nama = "";
 $kapasitas = "";
