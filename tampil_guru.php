@@ -22,7 +22,7 @@ $result = mysqli_query($koneksi, $sql);
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>NIS</th>
+                        <th>NIP</th>
                         <th>Nama Guru</th>
                         <th>Mapel</th>
                         <th>Keterangan</th>
@@ -32,7 +32,7 @@ $result = mysqli_query($koneksi, $sql);
                     <?php if (mysqli_num_rows($result) > 0) { ?>
                         <?php while($row = mysqli_fetch_assoc($result)) { ?>
                             <tr>
-                                <td><?= $row['nis'] ?></td>
+                                <td><?= $row['nip'] ?></td>
                                 <td><?= $row['nama'] ?></td>
                                 <td><?= $row['mapel'] ?></td>
                                 <td><?= $row['keterangan'] ?></td>

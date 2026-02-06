@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="form-group">
-        <label>Nama Siswa</label>
+        <label>Nama Guru</label>
         <input type="text" name="nama" class="form-control" value="<?= $nama ?>" required>
     </div>
 
