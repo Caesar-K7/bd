@@ -31,4 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Gagal menyimpan data: " . mysqli_error($koneksi);
     }
 }
+
+header("Location: form_siswa.php");
+exit;
+
 ?>

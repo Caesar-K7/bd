@@ -27,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $error = "Gagal menyimpan data: " . mysqli_error($koneksi);
     }
+    header("Location: form_guru.php");
+exit;
 }
 ?>
 
