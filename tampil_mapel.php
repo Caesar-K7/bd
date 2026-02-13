@@ -8,7 +8,7 @@ $result = mysqli_query($koneksi, $sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Siswa</title>
+    <title>Data Mapel</title>
     <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
@@ -16,7 +16,7 @@ $result = mysqli_query($koneksi, $sql);
 <div class="container mt-4">
     <div class="card">
         <div class="card-header">
-            <h4>Data Siswa</h4>
+            <h1>Data Mapel</h1>
         </div>
         <div class="card-body">
 

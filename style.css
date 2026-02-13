@@ -1,6 +1,6 @@
 /* RESET DASAR */
 * {
-    margin: 10px 10px 10px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,15 +11,12 @@ body {
     color: #333;
     background-color: #f4f6f9;
     padding: 20px;
-    background: red;
 }
 
 /* JUDUL */
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
-     background: red;
-    color: red;
 }
 
 /* CONTAINER */
@@ -31,14 +28,15 @@ h1, h2 {
 /* TABLE */
 table {
     width: 100%;
-    border-collapse: collapse;
     background: #fff;
     margin-bottom: 20px;
+    border-radius: 15px;
+    border-collapse: collapse;
+    overflow: hidden;
 }
 
 table th,
 table td {
-    border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
 }
@@ -85,11 +83,13 @@ input[type="submit"] {
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.6s ease-in-out;
+    margin-bottom: 3px;
 }
 
 button:hover,
 input[type="submit"]:hover {
-    background: #1976d2;
+    background: #133cb8;
 }
 
 /* LINK AKSI */
