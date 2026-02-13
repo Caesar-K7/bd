@@ -18,7 +18,7 @@ $alamat = '';
 </head>
 <body>
     <h1>Input Data Siswa</h1>
-    <form id method="post" action="simpan_siswa.php">
+    <form method="post" action="simpan_siswa.php">
     <div class="form-group">
         <label>NIS</label>
         <input type="number" name="nis" class="form-control" value="<?= $nis ?>" required>

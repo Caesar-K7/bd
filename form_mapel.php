@@ -17,7 +17,7 @@ $keterangan = '';
 </head>
 <body>
     <h1>Input Data Mapel</h1>
-    <form id method="post" action="simpan_mapel.php">
+    <form method="post" action="simpan_mapel.php">
     <div class="form-group">
         <label>id</label>
         <input type="number" name="id" class="form-control" value="<?= $id ?>" required>
@@ -30,11 +30,11 @@ $keterangan = '';
 
     <div class="form-group">
         <label>pengampu</label>
-        <input type="text" name="pengampu$pengampu" class="form-control" value="<?= $pengampu ?>" required>
+        <input type="text" name="pengampu" class="form-control" value="<?= $pengampu ?>" required>
     </div>
     <div class="form-group">
         <label>keterangan</label>
-        <input type="text" name="ketera$keterangan" class="form-control" value="<?= $keterangan ?>" required>
+        <input type="text" name="keterangan" class="form-control" value="<?= $keterangan ?>" required>
     </div>
 
     <button class="btn btn-primary">Simpan</button>
