@@ -1,4 +1,3 @@
-
 <?php
 include "CSS.php";
 $id = '';
@@ -6,7 +5,6 @@ $nama = '';
 $pengampu = '';
 $keterangan = '';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
