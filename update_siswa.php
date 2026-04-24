@@ -7,8 +7,13 @@ $kelas   = $_POST['kelas'];
 $jurusan = $_POST['jurusan'];
 $alamat  = $_POST['alamat'];
 
-$sql = "INSERT INTO siswa VALUES ('$nis','$nama','$kelas','$jurusan','$alamat')";
-mysqli_query($koneksi, $sql);
+mysqli_query($koneksi, "UPDATE siswa SET 
+    Nama='$nama',
+    Kelas='$kelas',
+    Jurusan='$jurusan',
+    Alamat='$alamat'
+    WHERE Nis='$nis'
+");
 
 header("location:tampil_siswa.php");
 ?>

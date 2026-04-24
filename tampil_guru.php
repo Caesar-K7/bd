@@ -1,55 +1,47 @@
-<?php
-include "koneksi.php";
-include "CSS.php";
-
-$sql = "SELECT * FROM guru ORDER BY NIP DESC";
-$result = mysqli_query($koneksi, $sql);
+<?php 
+include "koneksi.php"; 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Guru</title>
-    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+<title>Data Guru</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
 
-<div class="container mt-4">
-    <div class="card">
-        <div class="card-header">
-            <h4>Data Guru</h4>
-        </div>
-        <div class="card-body">
+<body class="bg-light">
+<div class="container mt-5">
 
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>NIP</th>
-                        <th>Nama Guru</th>
-                        <th>Mapel</th>
-                        <th>Keterangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (mysqli_num_rows($result) > 0) { ?>
-                        <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                            <tr>
-                                <td><?= $row['nip'] ?></td>
-                                <td><?= $row['nama'] ?></td>
-                                <td><?= $row['mapel'] ?></td>
-                                <td><?= $row['keterangan'] ?></td>
-                            </tr>
-                        <?php } ?>
-                    <?php } else { ?>
-                        <tr>
-                            <td colspan="4" class="text-center">Belum ada data</td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+<h3 class="text-center mb-3">Data Guru</h3>
 
-        </div>
-    </div>
+<table class="table table-bordered table-striped">
+<tr class="table-dark text-center">
+    <th>NIP</th>
+    <th>Nama</th>
+    <th>Mapel</th>
+    <th>Alamat</th>
+    <th>Aksi</th>
+</tr>
+
+<?php
+$data = mysqli_query($koneksi,"SELECT * FROM guru");
+while($d = mysqli_fetch_array($data)){
+?>
+<tr>
+    <td><?= $d['Nip'] ?></td>
+    <td><?= $d['Nama'] ?></td>
+    <td><?= $d['Mapel'] ?></td>
+    <td><?= $d['Alamat'] ?></td>
+    <td class="text-center">
+        <a href="edit_guru.php?nip=<?= $d['Nip'] ?>" class="btn btn-warning btn-sm">Edit</a>
+        <a href="hapus_guru.php?nip=<?= $d['Nip'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Hapus data?')">Hapus</a>
+    </td>
+</tr>
+<?php } ?>
+</table>
+
+<a href="form_guru.php" class="btn btn-success">Tambah Guru</a>
+<a href="index.php" class="btn btn-secondary">Dashboard</a>
+
 </div>
-
 </body>
 </html>

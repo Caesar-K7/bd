@@ -1,45 +1,29 @@
-
-<?php
-include "CSS.php";
-$id = '';
-$nama = '';
-$pengampu = '';
-$keterangan = '';
-?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Data Mapel</title>
+<title>Form Mapel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Input Data Mapel</h1>
-    <form id method="post" action="simpan_mapel.php">
-    <div class="form-group">
-        <label>id</label>
-        <input type="number" name="id" class="form-control" value="<?= $id ?>" required>
-    </div>
 
-    <div class="form-group">
-        <label>Nama Mapel</label>
-        <input type="text" name="nama" class="form-control" value="<?= $nama ?>" required>
-    </div>
+<body class="bg-light">
+<div class="container mt-5">
+<div class="card shadow p-4 col-md-6 mx-auto">
 
-    <div class="form-group">
-        <label>pengampu</label>
-        <input type="text" name="pengampu$pengampu" class="form-control" value="<?= $pengampu ?>" required>
-    </div>
-    <div class="form-group">
-        <label>keterangan</label>
-        <input type="text" name="ketera$keterangan" class="form-control" value="<?= $keterangan ?>" required>
-    </div>
+<h3 class="text-center mb-3">Input Data Mapel</h3>
 
-    <button class="btn btn-primary">Simpan</button>
-    <button type="reset" class="btn btn-danger ml-2">Hapus</button>
+<form action="simpan_mapel.php" method="post">
+    <input class="form-control mb-3" name="Kode_Mapel" placeholder="Kode Mapel" required>
+    <input class="form-control mb-3" name="Nama_Mapel" placeholder="Nama Mapel" required>
+    <input class="form-control mb-3" name="Jam_Pelajaran" placeholder="Jam Pelajaran (contoh: 4 JP)" required>
+    <input class="form-control mb-3" name="Guru_Pengampu" placeholder="Guru Pengampu" required>
+
+    <button class="btn btn-warning w-100">Simpan Mapel</button>
 </form>
 
+<a href="tampil_mapel.php" class="btn btn-link mt-2">Lihat Data</a>
+<a href="index.php" class="btn btn-secondary w-100 mt-2">Kembali</a>
+
+</div>
+</div>
 </body>
 </html>

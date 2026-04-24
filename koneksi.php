@@ -1,10 +1,5 @@
 <?php
-$host = "localhost";
-$user = "root";      
-$pass = "";           
-$db   = "p"; 
-
-$koneksi = mysqli_connect($host, $user, $pass, $db);
+$koneksi = mysqli_connect("localhost", "root", "", "bd_caesar");
 
 if (!$koneksi) {
     die("Koneksi gagal: " . mysqli_connect_error());
